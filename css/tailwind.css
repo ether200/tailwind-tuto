@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* We add the class before of utilities so we can use utilities on the class itself and do NOT OVERWRITE IT */
+
+/* With the @layer we're sure it won't get overwritten */
+
+/* The name must be the same than the default ones [base, components, utilities] */
+
+@layer components {
+  .btn {
+    @apply inline-block px-5 py-3 rounded-lg focus:outline-none focus:ring uppercase tracking-wider font-semibold text-sm sm:text-base;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-500 hover:bg-indigo-400 hover:-translate-y-0.5 transform transition focus:outline-none focus:ring focus:ring-offset-2 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600 text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-300 hover:bg-gray-200 focus:ring-gray-300 focus:ring-opacity-50 active:bg-gray-400 text-gray-800;
+  }
+}

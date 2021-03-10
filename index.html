@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="/css/tailwind.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Space-y utility class, applies margin y to every children except first one = space-y-6 === margin top -->
+    <div class="bg-gray-100 grid lg:grid-cols-2">
+      <div
+        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:px-12 lg:py-24"
+      >
+        <div>
+          <img class="h-10" src="/img/logo.svg" alt="Workcation" />
+          <img
+            class="rounded-lg shadow-xl mt-6 sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"
+            src="/img/beach-work.jpg"
+            alt="Woman workcationing on the beach"
+          />
+          <h1
+            class="text-2xl font-bold text-gray-900 mt-6 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
+          >
+            You can work from anywhere.
+            <br class="hidden lg:inline" />
+            <span class="text-indigo-500">Take advantage of it.</span>
+          </h1>
+          <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+            Workcation helps you find work-friendly rentails in beatiful
+            locations so you can enjoy some nice weather even when you're not on
+            vacation.
+          </p>
+          <div class="mt-4 sm:mt-6 space-x-1">
+            <a class="btn btn-primary" href="#">Book your escape</a>
+            <a class="btn btn-secondary" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden relative lg:block">
+        <img
+          class="absolute inset-0 w-full h-full object-cover object-center"
+          src="/img/beach-work.jpg"
+          alt="Woman workcationing on the beach"
+        />
+      </div>
+    </div>
+  </body>
+</html>
